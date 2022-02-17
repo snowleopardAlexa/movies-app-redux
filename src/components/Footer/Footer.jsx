@@ -1,6 +1,11 @@
+import "./Footer.scss";
+
 function Footer() {
     return (
-      <div>Footer</div>
+      <div className="footer">
+        <div>Movie App</div>
+        <div>Movie Inc App</div>
+      </div>
     );
   };
   
