@@ -1,6 +1,10 @@
+import MovieList from "../MovieList/MovieList";
+
 function Home() {
     return (
-      <div>Home</div>
+     <div className="banner-img">
+       <MovieList />
+     </div>
     );
   };
   
