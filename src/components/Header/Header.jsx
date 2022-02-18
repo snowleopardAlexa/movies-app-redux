@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaUser, FaUserAlt } from 'react-icons/fa';
+import { FaUserAlt } from 'react-icons/fa';
 import "./Header.scss";
 
 function Header() {
