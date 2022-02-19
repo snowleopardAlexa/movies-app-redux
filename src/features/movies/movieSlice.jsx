@@ -1,8 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { FaTableTennis } from 'react-icons/fa';
 
 const initialState = {
-    movies: []
+    movies: {},
 }
 
 const movieSlice = createSlice({
@@ -16,7 +15,8 @@ const movieSlice = createSlice({
 });
 
 export const { addMovies } = movieSlice.actions;
+export const getAllMovies = (state) => state.movies.movieSlice;
 export default movieSlice.reducer;
-export default movieSlice.reducer;
+
 
 
