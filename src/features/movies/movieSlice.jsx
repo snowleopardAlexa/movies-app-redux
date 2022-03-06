@@ -3,7 +3,7 @@ import movieApi from "../../common/api/movieApi";
 import { APIKey } from "../../common/api/MovieApiKey";
 
 // api call with async creator
-const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', 
+export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', 
     async() => {
     const movieText = "Harry";
        
