@@ -3,6 +3,7 @@
 .card-item {
     background: $font-secondary;
     cursor: pointer;
+    background-color: black;
 }
 
 .card-top {
@@ -15,7 +16,7 @@
 }
 
 .card-bottom {
-    paddng: 20px;
+    padding: 20px;
 }
 
 .card-info {
