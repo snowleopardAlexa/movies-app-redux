@@ -5,7 +5,10 @@ import { AiFillStar } from "react-icons/ai"
 import { FiFilm } from "react-icons/fi";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAsyncMovieOrShowDetail, getSelectedMovieOrShow } from "../../features/movies/movieSlice";
+import { fetchAsyncMovieOrShowDetail, 
+         getSelectedMovieOrShow,
+         removeSelectedMovieOrShow, 
+} from "../../features/movies/movieSlice";
 
 function MovieDetail() {
 
@@ -16,23 +19,29 @@ function MovieDetail() {
 
   useEffect(() => {
     dispatch(fetchAsyncMovieOrShowDetail(imdbID));
+    // cleanup function
+    return () => {
+      dispatch(removeSelectedMovieOrShow());
+    }
   }, [dispatch, imdbID]);
+
+
   return (
     <div className="movie-section">
       <div className="section-left">
         <div className="movie-title">{data.Title}</div>
         <div className="movie-rating">
           <span>
-            IMDB Rating <AiFillStar /> : {data.imdbRating}
+            IMDB Rating <AiFillStar style={{ color: "#ffd000" }} /> : {data.imdbRating}
           </span>
           <span>
-            IMDB Votes <BsFillHandThumbsUpFill /> : {data.imdbVotes}
+            IMDB Votes <BsFillHandThumbsUpFill style={{ color: "#ffd000" }} /> : {data.imdbVotes}
           </span>
           <span>
-            Runtime <FiFilm /> : {data.Runtime}
+            Runtime <FiFilm style={{ color: "#ffd000" }} /> : {data.Runtime}
           </span>
           <span>
-            Year <BsFillCalendarWeekFill /> : {data.Year}
+            Year <BsFillCalendarWeekFill style={{ color: "#ffd000" }} /> : {data.Year}
           </span>
         </div>
         <div className="movie-plot">
