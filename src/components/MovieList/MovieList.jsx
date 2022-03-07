@@ -6,15 +6,6 @@ import "./MovieList.scss";
 
 function MovieList() {
 
-  // slider
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  }
-
   const movies = useSelector(getAllMovies);
   const shows = useSelector(getAllShows);
   let renderMovies, renderShows = "";
