@@ -3,7 +3,7 @@
 .card-item {
     background: $font-general;
     cursor: pointer;
-    background-color: rgb(22, 21, 21);
+    background-color: $primary-color;
     transition: all 0.3s;
     min-height: 450px;
     height: 100%;
@@ -16,7 +16,7 @@
 }
 
 .card-top {
-    height: 300px;
+    height: 350px;
 
     img {
        width: 100%;
