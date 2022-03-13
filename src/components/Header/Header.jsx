@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import { FaUserCircle} from 'react-icons/fa';
+import { FaUserCircle, FaSearch} from 'react-icons/fa';
 import "./Header.scss";
 
 function Header() {
@@ -24,7 +24,7 @@ const submitHandler = (e) => {
              value={term} 
              placeholder="Search Movies or Shows" 
              onChange={(e) => setTerm(e.target.value)} />
-           <button type="submit"><i className="fa fa-search"></i></button>
+           <button type="submit"><FaSearch /></button>
          </form>
        </div>  
        <div className="user-image">
