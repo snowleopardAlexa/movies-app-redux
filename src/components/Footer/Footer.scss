@@ -4,9 +4,10 @@
     background: $secondary-color;
     height: 100px;
     display: flex;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     justify-content: center;
-    color: $font-primary;
+    color: $font-general;
     flex-direction: column;
     text-align: center;
+    font-weight: 600;
 }

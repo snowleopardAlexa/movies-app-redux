@@ -1,13 +1,22 @@
 @import "../../common/colors.scss";
 
 .card-item {
-    background: $font-secondary;
+    background: $font-general;
     cursor: pointer;
-    background-color: black;
+    background-color: $primary-color;
+    transition: all 0.3s;
+    min-height: 450px;
+    height: 100%;
+    margin: 10px;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
 }
 
 .card-top {
-    height: 300px;
+    height: 350px;
 
     img {
        width: 100%;
@@ -20,7 +29,7 @@
 }
 
 .card-info {
-    color: $font-primary;
+    color: $font-general;
     h4 {
         font-size: 22px;
         font-weight: 400;

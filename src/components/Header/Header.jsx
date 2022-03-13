@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaUserAlt } from 'react-icons/fa';
+import { FaUserCircle} from 'react-icons/fa';
 import "./Header.scss";
 
 function Header() {
@@ -9,7 +9,7 @@ function Header() {
          <div className="logo">Movie App</div>   
        </Link>
        <div className="user-image">
-         <FaUserAlt />
+         <FaUserCircle />
        </div>
      </div>
     );
