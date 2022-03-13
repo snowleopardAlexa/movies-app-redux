@@ -1,15 +1,23 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from 'react-router-dom';
+import {
+  fetchAsyncMovies,
+  fetchAsyncShows,
+} from "../../features/movies/movieSlice";
 import { FaUserCircle, FaSearch} from 'react-icons/fa';
 import "./Header.scss";
 
 function Header() {
 
 const [term, setTerm] = useState("");
+const dispatch = useDispatch();
 
 const submitHandler = (e) => {
   e.preventDefault();
-  console.log(term);
+  if (term === "") return alert("Please, enter earch term")
+  dispatch(fetchAsyncMovies(term));
+  dispatch(fetchAsyncShows(term));
 }
 
     return (
